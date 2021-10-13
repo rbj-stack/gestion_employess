@@ -14,12 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {  // kan  hayda
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {  // kan  hayda
     return $request->user();
 });
 
 Route::get('/user/{name}', function ($name){
-    return 'hi' . $name;
+    return $name ;
 });
